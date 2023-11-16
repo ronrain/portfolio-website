@@ -1,1 +1,93 @@
+body {
+  margin: 0;
+}
 
+#navbar {
+  display: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: fit fit-content;
+  background-color: bisque;
+}
+
+section {
+  padding: 1rem;
+}
+
+#navbar a {
+  padding: 3rem;
+}
+
+#home {
+  background-color: aqua;
+}
+
+#experiences {
+  background-color: burlywood;
+}
+
+#education {
+  background-color: aquamarine;
+}
+
+#projects {
+  background-color: chartreuse;
+}
+
+#interests {
+  background-color: gainsboro;
+}
+
+.cards {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			overflow: auto;
+		}
+
+		.cards .card {
+			width: calc(50% - 13px);
+			height: 150px;
+			background-color: #222;
+			color: #dc7b7b;
+			margin-bottom: 20px;
+			border-radius: 5px;
+			cursor: pointer;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			padding: 10px;
+			border: 3px solid #e25656;
+			box-shadow: 0 0 9px #4c0505;
+		}
+
+		.cards  .card h2 {
+			margin: 0;
+		}
+
+		.card-content {
+			padding: 100px 25px 25px;
+			overflow: auto;
+			height: 100%;
+			color: #fff;
+		}
+		.card-content > * {
+			transform: translateY(-35px);
+			opacity: 0;
+		}
+		.card-content h3 {
+			font-size: 32px;
+			margin-bottom: 35px !important;
+			animation: slideDown 0.5s ease-out forwards;
+		}
+		.card-content img {
+			width: 100%;
+			background-color: #fff;
+			margin-bottom: 10px;
+			animation: slideDown 0.5s ease-out 0.2s forwards;
+		}
+		.card-content p {
+			color: #999;
+			animation: slideDown 0.5s ease-out 0.4s forwards;
+		}
