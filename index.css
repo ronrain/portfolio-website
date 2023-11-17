@@ -1,5 +1,17 @@
+:root {
+--main-font: 'Roboto Condensed', sans-serif;
+--sec-font: 'Fira Sans Condensed', sans-serif;
+--front: #C7D59F;
+--back: #DADDD8;
+--f-col: #00120b;
+--shad: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
 body {
   margin: 0;
+  background-image: url("/assets/background.png");
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 #navbar {
@@ -8,10 +20,12 @@ body {
   align-items: center;
   text-align: center;
   width: 100%;
-  background-color: bisque;
-  padding: 2rem;
+  padding: 1rem;
   position: fixed;
   z-index: 1000;
+  background-color: var(--back);
+  backdrop-filter: blur(10px);
+  opacity: .8;
 }
 
 section {
@@ -27,31 +41,31 @@ section {
 }
 
 #home {
-  background-color: aqua;
   display: flex;
   justify-content: center;
   text-align: center;
   align-items: center;
+  padding-top: -3rem;
 }
 
 #experiences {
-  background-color: burlywood;
+  /* background-color: burlywood; */
 }
 
 #education {
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
 }
 
 #projects {
-  background-color: chartreuse;
+  /* background-color: chartreuse; */
 }
 
 #interests {
-  background-color: gainsboro;
+  /* background-color: gainsboro; */
 }
 
 #contact {
-  background-color: cadetblue;
+  /* background-color: cadetblue; */
 }
 
 .card {
@@ -60,10 +74,13 @@ section {
   height: 100%;
   transform-style: preserve-3d;
   transition: all 0.8s ease;
-  width: 250px;
+  width: 320px;
   height: 320px;
   background: grey;
-  display: inline-block;
+  display: inline-flex;
+  align-content: space-around;
+  margin: 1rem;
+  box-shadow: var(--shad);
 }
 
 .card:hover {
@@ -78,24 +95,27 @@ section {
   backface-visibility: hidden;
   color: black;
   text-align: center;
-  border-radius: ;
+  font-family: var(--sec-font);
 }
 
 .front {
-  background-color: orange;
   display: flex;
   justify-content: center;
   text-align: center;
   align-items: center;
+  background-color: var(--front);
+  font-size: 2.5rem;
 }
 
 .back {
-  background-color: yellow;
   overflow: scroll;
   scrollbar-width: none; 
   -ms-overflow-style: none;
   transform: rotateY(180deg);
   margin: auto;
+  background-color: var(--back);
+  font-size: 1.3rem;
+  padding: .9rem;
 }
 
 .back::-webkit-scrollbar {
@@ -114,7 +134,7 @@ section {
   position:relative;
   width: fit-content;
   height: fit-content;
-  background: #522d5b;
+  background: var(--front);
   border-radius: 0 30px 30px;
   padding: 1rem;
   margin-top: 30rem;
@@ -132,11 +152,38 @@ section {
 }
 
 .home-card:before {
-  box-shadow: 0 20px 0 0 #522d5b;
+  box-shadow: 0 20px 0 0 var(--front);
 }
 
 .selfie-img {
-  max-width: 30%;
-  margin: 2rem;
+  max-width: 15%;
+  margin-top: 0;
   border-radius: 25px;
+}
+
+h1, h2, h3 {
+  font-family: var(--main-font);
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+  background-color: var(--back); 
+  backdrop-filter: blur(10px); 
+  width: auto;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  opacity: .7;
+  margin-top: 2.3rem;
+  margin-left: 8rem;
+  margin-right:8rem
+}
+
+h3 {
+  font-size: 2rem;
 }
